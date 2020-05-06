@@ -1,0 +1,37 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="create tables" author="marvint" runOnChange="true">
+
+        <createTable tableName="person">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(50)"/>
+            <column name="image" type="varchar(50)"/>
+        </createTable>
+
+    <createTable tableName="credit">
+        <column autoIncrement="true" name="id" type="SERIAL">
+            <constraints primaryKey="true"/>
+        </column>
+        <column name="person_id" type="int4">
+            <constraints referencedTableName="person" referencedColumnNames="id"
+                         foreignKeyName="person_id_fk" nullable="false"/>
+        </column>
+        <column name="bank" type="varchar(50)"/>
+        <column name="title" type="varchar(50)"/>
+        <column name="date_start" type="date"/>
+        <column name="date_end" type="date"/>
+        <column name="cost" type="float8"/>
+        </createTable>
+
+
+    </changeSet>
+</databaseChangeLog>
