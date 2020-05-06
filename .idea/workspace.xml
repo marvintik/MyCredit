@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aecc938a-8cda-4067-94c1-ca5986fc4eba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/My_credit/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/domain/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-master.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/My_credit" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -104,22 +109,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588710742404" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1588777135939">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1588788829600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588777135939" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1588777135939">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588788829600" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1588788829600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588777135939" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1588777135939">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588788829600" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1588788829585">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588777135939" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1588777135939">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588788829585" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1588788829600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588777135939" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588788829600" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588710867899">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -140,14 +145,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588347811314" />
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1588758776369">
+    <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1588786692961">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1588758776369" />
-    <state x="389" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588363890662">
+    <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1588786692961" />
+    <state x="460" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588786365631">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1588363890662" />
+    <state x="460" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1588786365631" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1588366857954">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

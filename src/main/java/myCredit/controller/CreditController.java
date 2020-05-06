@@ -24,16 +24,26 @@ public class CreditController {
     }
 
 
+    @ResponseBody
     @PostMapping(value = "/new")
-    public void createCredit(@RequestBody Credit credit) {
-        creditService.createCredit(credit);
+    public Credit createCredit(@RequestBody Credit credit) {
+        Credit credit1 = creditService.createCredit(credit);
+        return credit1;
     }
 
+    @ResponseBody
     @DeleteMapping(value = "/delete")
-    public void deleteCredit(@RequestBody Integer id){ creditService.deleteCredit(id);}
+    public String deleteCredit(@RequestBody Integer id){ creditService.deleteCredit(id);
+        return "Status.OK";
+    }
 
+    @ResponseBody
     @PostMapping(value = "/edit")
-    public void editCredit(@RequestBody Credit credit) { creditService.saveCredit(credit);}
+    public Credit editCredit(@RequestBody Credit credit) {
+        creditService.saveCredit(credit);
+        Integer i = credit.getId();
+      Credit editCredit = creditService.getCredit(i);
+    return editCredit;}
 
     @RequestMapping(value="/viewAll")
     public ModelAndView home() {

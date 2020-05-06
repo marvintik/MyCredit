@@ -35,19 +35,27 @@ public class PersonController {
         return personService.getPerson(id);
     }
 
+    @ResponseBody
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-    public void deletePerson(@PathVariable Integer id){
+    public String deletePerson(@PathVariable Integer id){
         personService.deletePerson(id);
+        return "Status.OK";
     }
 
+    @ResponseBody
     @PostMapping(value = "/new")
-    public void createPerson(@RequestBody Person person){
-        personService.createPerson(person);
+    public Person createPerson(@RequestBody Person person){
+        Person newPerson = personService.createPerson(person);
+        return newPerson;
     }
 
+    @ResponseBody
     @PostMapping(value = "/edit")
-    public void editPerson(@RequestBody Person person){
+    public Person editPerson(@RequestBody Person person){
         personService.savePerson(person);
+        Integer i = person.getId();
+        Person editPerson = personService.getPerson(i);
+        return editPerson;
     }
 
 

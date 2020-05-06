@@ -9,5 +9,5 @@
 
     <include file="db/changelog/init.xml"/>
     <include file="db/changelog/db.change-table.xml"/>
-    
+
 </databaseChangeLog>
