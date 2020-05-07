@@ -6,8 +6,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/domain/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/changelog/db.changelog-master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/domain/Credit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/domain/Credit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/repository/CreditRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/repository/CreditRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/service/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/service/CreditService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/controller/CreditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/controller/CreditController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/controller/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/domain/Credit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/domain/Credit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/repository/CreditRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/repository/CreditRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/repository/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/repository/PersonRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/service/CreditService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/service/CreditService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/service/PersonService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/img" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -96,6 +106,11 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/My_credit" />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1588350052899">
       <screen x="0" y="0" width="1366" height="728" />
@@ -109,22 +124,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588710742404" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1588788829600">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1588864819360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588788829600" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1588788829600">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588864819360" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1588864819360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588788829600" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1588788829585">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588864819360" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1588864819360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588788829585" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1588788829600">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588864819360" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1588864819360">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588788829600" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588864819360" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588710867899">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -141,14 +156,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588710867899" />
-    <state x="0" y="0" key="SettingsEditor" timestamp="1588347811314">
+    <state x="0" y="0" key="SettingsEditor" timestamp="1588847962923">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588347811314" />
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1588786692961">
+    <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588847962923" />
+    <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1588880842111">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1588786692961" />
+    <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1588880842111" />
     <state x="460" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588786365631">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

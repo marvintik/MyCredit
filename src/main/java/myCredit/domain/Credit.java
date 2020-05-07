@@ -17,8 +17,8 @@ public class Credit {
 
     String bank;
     String title;
-    LocalDate date_start;
-    LocalDate date_end;
+    LocalDate dateStart;
+    LocalDate dateEnd;
     Double cost;
     Double monthPay;
 

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Transactional
 public class PersonService {
 
     @Autowired
@@ -20,12 +21,11 @@ public class PersonService {
         return personRepository.findById(id).get();
     }
 
-    @Transactional
+
     public Person createPerson(Person person) {
         return personRepository.save(person);
     }
 
-    @Transactional
     public void savePerson(Person person) {
         personRepository.save(person);
     }
@@ -36,16 +36,17 @@ public class PersonService {
         return list;
     }
 
-    @Transactional
     public void deletePerson(Integer id){
         personRepository.deleteById(id);
     }
 
-
-    @Transactional
     public List<Person> listAllPersons() {
         List<Person> list = new ArrayList<>();
         personRepository.findAll().forEach(list::add);
         return list;
+    }
+
+    public List<Person> listPersonName(String name){
+        return personRepository.findByName(name);
     }
 }
