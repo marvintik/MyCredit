@@ -1,9 +1,7 @@
 package myCredit.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -26,4 +24,5 @@ public class Credit {
     @ManyToOne(optional = false)
     @JoinColumn(name = "person_id")
     Person person;
+
 }

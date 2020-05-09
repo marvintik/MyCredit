@@ -31,7 +31,5 @@
         <column name="date_end" type="date"/>
         <column name="cost" type="float8"/>
         </createTable>
-
-
     </changeSet>
 </databaseChangeLog>

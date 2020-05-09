@@ -10,4 +10,5 @@
             <column name="month_pay" type="float8"/>
         </addColumn>
     </changeSet>
+
 </databaseChangeLog>

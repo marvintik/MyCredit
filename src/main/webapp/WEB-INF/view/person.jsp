@@ -22,7 +22,7 @@
         <tr>
             <td>${person.id}</td>
             <td>${person.name}</td>
-            <td>${person.image}</td>
+            <td><img src=${person.image} height=42, weight=42></td>
         </tr>
         </c:forEach>
             </table>
