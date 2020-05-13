@@ -23,23 +23,36 @@ public class PersonController {
 
     /*VieWController*/
 
-    @RequestMapping("/persons/newView")
-    public ModelAndView newPersonForm() {
+    @GetMapping("/add")
+    public String newPersonForm(Model model) {
         Person person = new Person();
-        ModelAndView model = new ModelAndView("new_person");
-        model.addObject("person", person);
-        return model;
+        model.addAttribute("person", person);
+        return "/newPerson";
     }
 
-    @RequestMapping(value = "/persons/saveView", method = RequestMethod.POST)
-    public String createPerson(@RequestParam(value="name") String name, @RequestParam (value="image") String image)  {
-        Person person = new Person();
-        person.setName(name);
-        person.setImage(image);
+    @PostMapping("/add")
+    public String newPersonAdd(@ModelAttribute Person person, Model model){
+        personService.createPerson(person);
+        return "redirect:/mycredit/person/all";
+    }
+
+    @GetMapping(value = "/{id}/edit")
+    public String editPersonForm (@PathVariable Integer id,Model model) {
+        Person person = personService.getPerson(id);
+        model.addAttribute("person", person);
+        return "/editPerson";
+    }
+
+    @PostMapping(value = "/{id}/edit")
+    public String editPersonForm(@ModelAttribute Person person, @PathVariable Integer id, Model model){
+        person.setId(id);
         personService.savePerson(person);
-        return "redirect:/";
-
+        return "redirect:/mycredit/person/all";
     }
+
+    @GetMapping(value = "/{id}/delete")
+    public String deleteCreditByPerson(@PathVariable Integer id) {personService.deletePerson(id);
+        return "redirect:/mycredit/person/all";}
 
     @GetMapping(value="/all")
     public String home(Model model) {
@@ -49,18 +62,24 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/persons/searchView", method = RequestMethod.GET)
-    public ModelAndView filter() {
-        ModelAndView mav = new ModelAndView("search"/*, "command", new Filter()*/);
-        //System.out.println(filter());
-        return mav;
+    public String filter() {
+        return "";
     }
 
-    @GetMapping("/{id}/view")
-    public ModelAndView getPerson(@PathVariable Integer id) {
+    @GetMapping("/{id}")
+    public String getPerson(@PathVariable Integer id, Model model) {
         Person person = personService.getPerson(id);
-        ModelAndView mav = new ModelAndView("personId");
-        mav.addObject("person", person);
-        return mav;
+        List<Credit> credits = person.getCredits();
+        double sumCost = 0;
+        double sumMonthPay = 0;
+        for (Credit credit:credits) {
+            if (credit.getCost() != null) {sumCost += credit.getCost();}
+            if (credit.getMonthPay() != null) {sumMonthPay += credit.getMonthPay();}
+        }
+        model.addAttribute("person", person);
+        model.addAttribute("sumCost", sumCost);
+        model.addAttribute("sumMonthPay", sumMonthPay);
+        return "/personId";
     }
 
 }

@@ -23,8 +23,13 @@ public class CreditService {
     }
     
     public Credit createCredit(Credit create) {
+        if (creditRepository.existsById(create.getId())) {
+            create.setId((int) creditRepository.count()+1);
+        };
         return creditRepository.save(create);
     }
+
+
 
     public void saveCredit(Credit credit) {
         creditRepository.save(credit);
