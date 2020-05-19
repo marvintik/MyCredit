@@ -32,6 +32,9 @@ public class PersonController {
 
     @PostMapping("/add")
     public String newPersonAdd(@ModelAttribute Person person, Model model){
+        if (person.getImage()=="" || person.getImage()==null){
+            person.setImage("https://goo.su/16eh");
+        }
         personService.createPerson(person);
         return "redirect:/mycredit/person/all";
     }

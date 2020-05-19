@@ -1,10 +1,15 @@
 package myCredit.controller;
 
+import myCredit.domain.User;
+import myCredit.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Controller
 // @RequestMapping(value = "/mycredit/main")
@@ -15,18 +20,23 @@ public class MainController  {
         return "index";
     }*/
 
+    @Autowired
+    UserService userService;
+
     @GetMapping(value = {"/", "/index"})
     public String index() {
         return "/index";
     }
 
     @GetMapping("/admin")
-    public String admin() {
+    public String admin(Model model) {
+        List<User> users = userService.listAll();
+        model.addAttribute("users", users);
         return "/admin";
     }
 
     @GetMapping("/user")
-    public String user() {
+    public String userPage() {
         return "/user";
     }
 

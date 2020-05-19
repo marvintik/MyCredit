@@ -8,12 +8,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div th:replace="fragments/header :: header-css"/>
 </head>
 
 <body>
 <div th:replace="fragments/header :: header"/>
 <div class="container">
-    <h1 th:inline="text">Добавьте нового человека:</h1>
+    <h1 th:inline="text">Изменить человека:</h1>
         <form th:action="@{'/mycredit/person/' + ${person.id} + '/edit'}" method="post" th:object="${person}">
             <div class="form-group">
                 <label>Имя</label>
@@ -23,7 +24,7 @@
                 <label>Картинка</label>
                 <input type="text" th:field="*{image}" th:value="${person.image}">
             </div>
-            <input type="submit" value="Добавить человека">
+            <input type="submit" value="Изменить человека">
         </form>
 </div>
 </body>

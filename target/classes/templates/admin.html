@@ -14,10 +14,32 @@
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
+    </div>
+
+        <div class="row col-md-7 table-responsive">
+            <table id="personTable" class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Имя</th>
+                    <th>Пароль</th>
+                    <th>Роль</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user, rowStat: ${users}"
+                    th:style="${rowStat.odd} ? 'color: gray' : 'color: blue;'">
+                    <td th:text="${rowStat.count}"></td>
+                    <td th:text="${user.username}"></td>
+                    <td th:text="${user.password}"></td>
+                    <td><span th:each="role: ${user.roles}"><span th:text="${role.name}"/><span> + </span></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 
-</div>
 <!-- /.container -->
 
 <div th:replace="fragments/footer :: footer"/>

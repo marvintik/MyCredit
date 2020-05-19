@@ -1,11 +1,11 @@
-h1{
-    color: #4a2bff;
-}
-
-h2{
-    color: #ff171c;
-}
-
 footer{
     margin-top:60px;
+}
+
+.logo-image{
+    width: 120px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -20px;
 }

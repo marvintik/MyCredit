@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Person</title>
+    <title>MyCredit</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div th:replace="fragments/header :: header-css"/>
 </head>
 
 <body>
 <div th:replace="fragments/header :: header"/>
 <div class="container">
-    <div class="">
-    <h1 th:inline="text">Добро пожаловать, <span th:text="${person.name}"></span>!</h1>
-         <img th:src=${person.image} height="140" width="140" align="right">
-        <h3 th:inline="text"> Общая сумма:  <span th:text="${sumCost}"></span></h3>
-        <h3 th:inline="text"> Сумма в месяц:  <span th:text="${sumMonthPay}"></span></h3>
-    <a th:href="@{'/mycredit/person/' + ${person.id} + '/credit/add'}"><img th:src=@{/img/add_2.png} height=100, weight=100 align="left"></a></div>
+        <div class="media">
+            <div class="media-body">
+            <h1 th:inline="text">Добро пожаловать, <span th:text="${person.name}"></span>!</h1>
+                <h2>Все кредиты:  </h2>
+                <h4 th:inline="text"> Общая сумма:  <span th:text="${sumCost}"></span></h4>
+                <h4 th:inline="text"> Сумма в месяц:  <span th:text="${sumMonthPay}"></span></h4>
+            </div>
+            <div class="media-right">
+                <img th:src=${person.image} height="140" width="140">
+                <a th:href="@{'/mycredit/person/' + ${person.id} + '/credit/add'}"><img th:src=@{/img/add_2.png}></a>
+            </div>
+        </div>
+            <div class="media">
+            <div class="media-left media-bottom">
+
+            </div>
+            <div class="media-body">
+
+            </div>
+        </div>
         <div class="table-responsive">
         <table id="personTable" class="table">
             <thead>

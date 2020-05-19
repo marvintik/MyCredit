@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Person List</title>
+    <title>MyCredit</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}"/>
+    <div th:replace="fragments/header :: header-css"/>
 </head>
 
 <body>
 <div th:replace="fragments/header :: header"/>
 <div class="container">
-    <h1>Person Table</h1>
-    <a th:href="@{'/mycredit/person/add'}"><img th:src=@{/img/add_2.png} height=42, weight=42></a>
+    <div class="media">
+        <div class="media-left">
+            <a th:href="@{'/mycredit/person/add'}"><img class="add-img" th:src=@{/img/add_2.png}></a>
+        </div>
+        <div class="media-body">
+            <h1>Person Table</h1>
+        </div>
+    </div>
+
     <div class="row col-md-7 table-responsive">
         <table id="personTable" class="table">
             <thead>
