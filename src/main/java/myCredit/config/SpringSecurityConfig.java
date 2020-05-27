@@ -29,12 +29,22 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.csrf().disable()
-                .authorizeRequests()
+        http.authorizeRequests()
                 .antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/mycredit/**").permitAll()
                 .antMatchers("/admin/**").hasAnyRole("ADMIN")
                 .antMatchers("/user/**").hasAnyRole("USER")
                 .anyRequest().authenticated()
+                .and()
+                .requiresChannel().antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/mycredit/**").requiresInsecure()
+                .and()
+                .csrf().disable()
+                .requiresChannel()		//config request to use the mapping to a required channel
+                .anyRequest().requiresSecure()
+                .and()
+                .portMapper()
+                .http(8080).mapsTo(8443)
+                .and()
+                .oauth2Login()
                 .and()
                 .formLogin()
                 .loginPage("/login")
@@ -44,7 +54,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .permitAll()
                 .and()
-                .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
+               .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
+
     }
 
    /* @Autowired

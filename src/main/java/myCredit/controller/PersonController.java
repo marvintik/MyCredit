@@ -1,7 +1,9 @@
 package myCredit.controller;
 
+import myCredit.domain.BankAccount;
 import myCredit.domain.Credit;
 import myCredit.domain.Person;
+import myCredit.service.BankService;
 import myCredit.service.PersonService;
 import org.apache.tomcat.util.http.parser.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,9 @@ public class PersonController {
 
     @Autowired
     PersonService personService;
+
+    @Autowired
+    BankService bankService;
 
     /*VieWController*/
 
@@ -67,6 +72,15 @@ public class PersonController {
     @RequestMapping(value = "/persons/searchView", method = RequestMethod.GET)
     public String filter() {
         return "";
+    }
+
+    @GetMapping(value = "/{id}/bank/mono")
+    public String getAccountMono(@PathVariable Integer id,Model model) {
+        var person = personService.getPerson(id);
+        var token = person.getTokenMono();
+        BankAccount.Example example = bankService.getClientMono(token);
+        model.addAttribute("example", example);
+        return "/personIdMono";
     }
 
     @GetMapping("/{id}")

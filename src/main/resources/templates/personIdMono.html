@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MyCredit</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+
+<body>
+<div th:replace="fragments/header :: header"/>
+<div class="container">
+
+            <h1 th:inline="text">Добро пожаловать, <span th:text="${example.name}"></span>!</h1>
+            <h2>Все счета Монобанк:  </h2>
+        <div class="table-responsive">
+        <table id="personTable" class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Баланс</th>
+                <th>Валюта</th>
+                <th>Кредитный лимит</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="account, rowStat: ${example.accounts}"
+                th:style="${rowStat.odd} ? 'color: gray' : 'color: blue;'">
+                <td th:text="${rowStat.count}"></td>
+                <td th:text="${account.balance}"></td>
+                <td th:text="${account.currencyName}"></td>
+                <td th:text="${account.creditLimit}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>

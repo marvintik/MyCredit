@@ -21,6 +21,9 @@ public class Person {
     @Column(nullable = true)
     String image;
 
+    @Column
+    String tokenMono;
+
     @ToString.Exclude
     @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "person")

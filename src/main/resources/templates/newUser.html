@@ -14,18 +14,20 @@
 <body>
 <div th:replace="fragments/header :: header"/>
 <div class="container">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
     <h1 th:inline="text">Регистрация:</h1>
         <form th:action="@{'/mycredit/user/add'}" method="post" th:object="${user}">
             <div class="form-group">
                 <label>Имя пользователя</label>
-                <input type="text" th:field="*{username}">
+                <input  type="text" class="form-control input-lg" th:field="*{username}">
             </div>
             <div class="form-group">
                 <label>Пароль</label>
-                <input type="password" th:field="*{password}">
+                <input type="password" class="form-control input-lg" th:field="*{password}">
             </div>
-            <input type="submit" value="Добавить пользователя">
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Добавить пользователя">
         </form>
+    </div>
 </div>
 </body>
 </html>
