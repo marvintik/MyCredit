@@ -14,7 +14,7 @@
 <body>
 <div th:replace="fragments/header :: header"/>
 <div class="container">
-        <h1 th:inline="text">Кредиты: <span th:text="${bank}"> </h1>
+    <h1 th:inline="text">Кредиты: <span th:text="${bank}"></span></h1>
         <h3 th:inline="text"> Общая сумма:  <span th:text="${sumCost}"></span></h3>
         <h3 th:inline="text"> Сумма в месяц:  <span th:text="${sumMonthPay}"></span></h3>
 
@@ -49,7 +49,7 @@
         </table>
 
     </div>
-
+    <div th:replace="fragments/footer :: footer"/>
 </div>
 <script>
 $(document).ready(function(){

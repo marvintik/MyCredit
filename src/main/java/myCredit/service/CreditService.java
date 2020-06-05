@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -38,6 +39,7 @@ public class CreditService {
     public List<Credit> listAll() {
         List<Credit> list = new ArrayList<>();
         creditRepository.findAll().forEach(list::add);
+        list.sort(Comparator.comparing(Credit::getId));
         return list;
     }
 
@@ -48,6 +50,7 @@ public class CreditService {
     public List<Credit> listAllCredits() {
         List<Credit> list = new ArrayList<>();
         creditRepository.findAll().forEach(list::add);
+        list.sort(Comparator.comparing(Credit::getId));
         return list;
     }
 

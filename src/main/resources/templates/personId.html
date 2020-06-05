@@ -20,6 +20,7 @@
                 <h2>Все кредиты:  </h2>
                 <h4 th:inline="text"> Общая сумма:  <span th:text="${sumCost}"></span></h4>
                 <h4 th:inline="text"> Сумма в месяц:  <span th:text="${sumMonthPay}"></span></h4>
+                <a th:href="@{'/mycredit/person/' + ${person.id} + '/bank/mono'}">Счета монобанк</a>
             </div>
             <div class="media-right">
                 <img th:src=${person.image} height="140" width="140">

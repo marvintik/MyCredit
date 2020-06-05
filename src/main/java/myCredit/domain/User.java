@@ -20,12 +20,19 @@ public class User  implements UserDetails {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         Integer id;
 
-        private String username;
-        private String password;
+        String username;
+        String password;
+
+        @OneToOne
+        UserGoogle userGoogle;
+        @OneToOne
+        UserFacebook userFacebook;
+        @OneToOne
+        UserGithub userGithub;
 
         @Enumerated(EnumType.STRING)
         @ManyToMany(fetch = FetchType.EAGER)
-        private Set<Role> roles;
+         Set<Role> roles;
 
         @ToString.Exclude
         @JsonManagedReference
