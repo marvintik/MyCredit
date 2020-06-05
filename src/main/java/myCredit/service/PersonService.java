@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -33,6 +34,7 @@ public class PersonService {
     public List<Person> listAll() {
         List<Person> list = new ArrayList<>();
         personRepository.findAll().forEach(list::add);
+        list.sort(Comparator.comparing(Person::getId));
         return list;
     }
 
@@ -43,6 +45,7 @@ public class PersonService {
     public List<Person> listAllPersons() {
         List<Person> list = new ArrayList<>();
         personRepository.findAll().forEach(list::add);
+       list.sort(Comparator.comparing(Person::getId));
         return list;
     }
 

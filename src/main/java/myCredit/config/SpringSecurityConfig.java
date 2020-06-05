@@ -15,8 +15,6 @@ import org.springframework.stereotype.Component;
 @Configuration
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
-    private AccessDeniedHandler accessDeniedHandler;
 
     @Autowired
     UserService userService;
@@ -30,19 +28,16 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/mycredit/**").permitAll()
-                .antMatchers("/admin/**").hasAnyRole("ADMIN")
-                .antMatchers("/user/**").hasAnyRole("USER")
+                .antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/error").permitAll()
+                .antMatchers("/admin/**", "/mycredit/**").hasAnyRole("ADMIN")
+                .antMatchers("/user/**", "/mycredit/**").hasAnyRole("USER")
                 .anyRequest().authenticated()
                 .and()
-                .requiresChannel().antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/mycredit/**").requiresInsecure()
+                .requiresChannel().antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/error").requiresInsecure()
                 .and()
                 .csrf().disable()
                 .requiresChannel()		//config request to use the mapping to a required channel
                 .anyRequest().requiresSecure()
-                .and()
-                .portMapper()
-                .http(8080).mapsTo(8443)
                 .and()
                 .oauth2Login()
                 .and()
@@ -52,19 +47,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll()
-                .and()
-               .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
+                .permitAll();
 
     }
-
-   /* @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("user").password("{noop}password").roles("USER")
-                .and()
-                .withUser("admin").password("{noop}password").roles("ADMIN");
-    }*/
 
     @Autowired
     protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
