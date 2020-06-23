@@ -22,13 +22,16 @@ public class User  implements UserDetails {
 
         String username;
         String password;
+        String picture;
+        String email;
 
+        @ToString.Exclude
         @OneToOne
         UserGoogle userGoogle;
+
+        @ToString.Exclude
         @OneToOne
         UserFacebook userFacebook;
-        @OneToOne
-        UserGithub userGithub;
 
         @Enumerated(EnumType.STRING)
         @ManyToMany(fetch = FetchType.EAGER)

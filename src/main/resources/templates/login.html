@@ -47,9 +47,8 @@
                 </fieldset>
             </form>
             <h3>Login with:</h3>
-            <p th:each="url : ${urls}">
-                <a th:text="${url.key}" th:href="${url.value}">Client</a>
-            </p>
+            <a href="/oauth2/authorization/facebook" class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook"></span>Sign in with Facebook</a>
+            <a href="/oauth2/authorization/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>Sign in with Google</a>
         </div>
     </div>
 

@@ -4,7 +4,6 @@ D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\service\PersonServ
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\domain\Role.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\domain\User.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\controller\PersonController.java
-D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\domain\UserGithub.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\controller\PersonRestController.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\domain\Person.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\domain\UserGoogle.java
@@ -13,7 +12,6 @@ D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\controller\MainCon
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\domain\UserFacebook.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\repository\RoleRepository.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\repository\UserFacebookRepository.java
-D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\repository\UserGithubRepository.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\Application.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\domain\BankAccount.java
 D:\Lena\IdeaProjects\Employee\MyCredit\src\main\java\myCredit\repository\CreditRepository.java

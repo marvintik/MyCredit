@@ -12,7 +12,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}"/>
+        <link rel="stylesheet" href="/css/bootstrap-social.css" th:href="@{/css/bootstrap-social.css}"/>
         <link  rel="icon" type="image/png" th:href="@{/img/favicon.png}">
+        <script src="https://kit.fontawesome.com/b29f9dab4d.js" crossorigin="anonymous"></script>
     </div>
 </head>
 <body>
@@ -35,7 +37,7 @@
                     <li><a th:href="@{/mycredit/credit/all}">Все кредиты</a></li>
                 </ul>
             <ul class="nav navbar-nav navbar-right" sec:authorize="!isAuthenticated()">
-                <li><a th:href="@{/mycredit/user/add}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a th:href="@{/account/add}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a th:href="@{/login}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
                 <ul class="nav navbar-nav navbar-right" sec:authorize="isAuthenticated()">

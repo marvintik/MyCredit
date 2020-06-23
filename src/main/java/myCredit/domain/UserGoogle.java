@@ -11,6 +11,7 @@ public class UserGoogle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
+    String idOauth;
      String name;
      String picture;
      String email;
