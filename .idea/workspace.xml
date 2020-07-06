@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aecc938a-8cda-4067-94c1-ca5986fc4eba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,22 +141,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588976604588" />
-    <state width="1286" height="223" key="GridCell.Tab.0.bottom" timestamp="1590626123171">
+    <state width="1286" height="178" key="GridCell.Tab.0.bottom" timestamp="1591384670853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590626123171" />
-    <state width="1286" height="223" key="GridCell.Tab.0.center" timestamp="1590626123171">
+    <state width="1286" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
+    <state width="1286" height="178" key="GridCell.Tab.0.center" timestamp="1591384670853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590626123171" />
-    <state width="1286" height="223" key="GridCell.Tab.0.left" timestamp="1590626123171">
+    <state width="1286" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
+    <state width="1286" height="178" key="GridCell.Tab.0.left" timestamp="1591384670853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590626123171" />
-    <state width="1286" height="223" key="GridCell.Tab.0.right" timestamp="1590626123171">
+    <state width="1286" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
+    <state width="1286" height="178" key="GridCell.Tab.0.right" timestamp="1591384670853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590626123171" />
+    <state width="1286" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
     <state width="1286" height="223" key="GridCell.Tab.1.bottom" timestamp="1590626123171">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -204,17 +203,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/myCredit/service/CreditService.java</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java</url>
-          <line>81</line>
+          <line>82</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java</url>
-          <line>80</line>
+          <line>81</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
