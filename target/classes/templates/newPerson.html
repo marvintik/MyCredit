@@ -15,7 +15,7 @@
 <div th:replace="fragments/header :: header"/>
 <div class="container">
     <h1 th:inline="text">Добавьте нового человека:</h1>
-        <form th:action="@{'/mycredit/person/add'}" method="post" th:object="${person}">
+        <form th:action="@{'/'+${personAdd}+'/add'}" method="post" th:object="${person}">
             <div class="form-group">
                 <label>Имя</label>
                 <input type="text" th:field="*{name}">

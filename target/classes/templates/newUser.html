@@ -16,10 +16,14 @@
 <div class="container">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
     <h1 th:inline="text">Регистрация:</h1>
-        <form th:action="@{'/mycredit/user/add'}" method="post" th:object="${user}">
+        <form th:action="@{'/account/add'}" method="post" th:object="${user}">
             <div class="form-group">
                 <label>Имя пользователя</label>
                 <input  type="text" class="form-control input-lg" th:field="*{username}">
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="text" class="form-control input-lg" th:field="*{email}">
             </div>
             <div class="form-group">
                 <label>Пароль</label>
@@ -27,6 +31,9 @@
             </div>
             <input type="submit" class="btn btn-lg btn-primary btn-block" value="Добавить пользователя">
         </form>
+        <h3>Or register with:</h3>
+        <a href="/oauth2/authorization/facebook" class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook"></span>Sign in with Facebook</a>
+        <a href="/oauth2/authorization/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>Sign in with Google</a>
     </div>
 </div>
 </body>

@@ -11,12 +11,7 @@
         </addColumn>
     </changeSet>
 
-    <changeSet id="change user" author="marvint">
-        <renameTable oldTableName="user" newTableName="users"></renameTable>
-    </changeSet>
+    
 
-    <changeSet id="chande password" author="marvint">
-        <modifyDataType tableName="users" columnName="password" newDataType="varchar(100)"></modifyDataType>
-    </changeSet>
 
 </databaseChangeLog>

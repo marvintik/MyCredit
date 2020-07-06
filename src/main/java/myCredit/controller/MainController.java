@@ -3,22 +3,36 @@ package myCredit.controller;
 import myCredit.domain.User;
 import myCredit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ResolvableType;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.security.oauth2.client.registration.ClientRegistration;
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
-// @RequestMapping(value = "/mycredit/main")
 public class MainController  {
-/*    @GetMapping({"/", "/hello"})
-    public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
-        model.addAttribute("name", name);
-        return "index";
-    }*/
 
     @Autowired
     UserService userService;
@@ -35,10 +49,6 @@ public class MainController  {
         return "/admin";
     }
 
-    @GetMapping("/user")
-    public String userPage() {
-        return "/user";
-    }
 
     @GetMapping("/about")
     public String about() {
@@ -46,8 +56,10 @@ public class MainController  {
     }
 
     @GetMapping("/login")
-    public String login() {
-        return "/login";
+    public String getLogin(Model model) {
+        return "login";
     }
+
+
 
 }

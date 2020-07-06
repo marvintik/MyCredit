@@ -32,6 +32,8 @@ public class PersonController {
     @GetMapping("/add")
     public String newPersonForm(Model model) {
         Person person = new Person();
+        String personAdd = "mycredit/person";
+        model.addAttribute("personAdd", personAdd);
         model.addAttribute("person", person);
         return "/newPerson";
     }
@@ -66,7 +68,9 @@ public class PersonController {
     @GetMapping(value="/all")
     public String home(Model model) {
         List<Person> persons = personService.listAll();
+        String personAdd = "mycredit/person";
         model.addAttribute("persons", persons);
+        model.addAttribute("personAdd", personAdd);
         return "/person";
     }
 

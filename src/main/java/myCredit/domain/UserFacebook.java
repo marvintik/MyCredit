@@ -10,7 +10,7 @@ public class UserFacebook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
-
+    String idOauth;
     String name;
     String picture;
     String email;
