@@ -83,7 +83,7 @@ public class CreditRestController {
             return mav;
         }
 
-        @RequestMapping(value = "/credits//search", method = RequestMethod.GET)
+        @RequestMapping(value = "/credits/search", method = RequestMethod.GET)
         public ModelAndView filter() {
             ModelAndView mav = new ModelAndView("search"/*, "command", new Filter()*/);
             //System.out.println(filter());

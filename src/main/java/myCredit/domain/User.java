@@ -25,6 +25,7 @@ public class User  implements UserDetails {
         String picture;
         String email;
 
+
         @ToString.Exclude
         @OneToOne
         UserGoogle userGoogle;

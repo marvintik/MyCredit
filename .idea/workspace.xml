@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aecc938a-8cda-4067-94c1-ca5986fc4eba" name="Default Changelist" comment="" />
+    <list default="true" id="aecc938a-8cda-4067-94c1-ca5986fc4eba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MyCredit.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/controller/CreditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/controller/CreditController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/controller/CreditRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/controller/CreditRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/controller/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +39,8 @@
         <option value="Enum" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -47,26 +72,20 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="scala_project_settings_configurable.last_selected_tab_index" value="0" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources" />
-      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\templates" />
-      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\static\js" />
-      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\static\css" />
-      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\img" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="myCredit.repository" />
-      <recent name="myCredit.service" />
-      <recent name="myCredit.controller" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="myCredit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\templates\" />
@@ -74,6 +93,21 @@
       <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\templates\fragments" />
       <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\templates" />
       <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="myCredit.repository" />
+      <recent name="myCredit.service" />
+      <recent name="myCredit.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources" />
+      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\templates" />
+      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\static\js" />
+      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\static\css" />
+      <recent name="C:\Users\rgame\IdeaProjects\MyCredit\src\main\resources\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -139,22 +173,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588976604588" />
-    <state width="1286" height="178" key="GridCell.Tab.0.bottom" timestamp="1591384670853">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="209" key="GridCell.Tab.0.bottom" timestamp="1595461219237">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1286" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
-    <state width="1286" height="178" key="GridCell.Tab.0.center" timestamp="1591384670853">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="209" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595461219237" />
+    <state width="1493" height="209" key="GridCell.Tab.0.center" timestamp="1595461219237">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1286" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
-    <state width="1286" height="178" key="GridCell.Tab.0.left" timestamp="1591384670853">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="209" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595461219237" />
+    <state width="1493" height="209" key="GridCell.Tab.0.left" timestamp="1595461219237">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1286" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
-    <state width="1286" height="178" key="GridCell.Tab.0.right" timestamp="1591384670853">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1493" height="209" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595461219237" />
+    <state width="1493" height="209" key="GridCell.Tab.0.right" timestamp="1595461219237">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1286" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
+    <state width="1493" height="209" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595461219237" />
     <state width="1286" height="223" key="GridCell.Tab.1.bottom" timestamp="1590626123171">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -175,14 +213,20 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1590237428717" />
-    <state x="0" y="0" key="SettingsEditor" timestamp="1588967433784">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1595018658237">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588967433784" />
-    <state x="390" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1594058408009">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595018658237" />
+    <state x="439" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1595458643227">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1594058408009" />
+    <state x="439" y="216" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1595458643227" />
+    <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1595018832183">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1595018832183" />
     <state x="413" y="119" key="extract.method.dialog" timestamp="1590243710394">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -203,16 +247,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/myCredit/service/CreditService.java</url>
           <line>40</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

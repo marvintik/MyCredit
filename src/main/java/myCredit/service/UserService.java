@@ -111,6 +111,8 @@ public class  UserService implements UserDetailsService {
         return user;
     }
 
+
+
     public UserFacebook getUserFacebook(@AuthenticationPrincipal OAuth2AuthenticationToken authenticationToken){
         OAuth2User user = authenticationToken.getPrincipal();
         UserFacebook userFacebook = userFacebookRepository.findByIdOauth(user.getName());
