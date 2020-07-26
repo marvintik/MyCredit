@@ -21,9 +21,15 @@
                 <h4 th:inline="text"> Общая сумма:  <span th:text="${sumCost}"></span></h4>
                 <h4 th:inline="text"> Сумма в месяц:  <span th:text="${sumMonthPay}"></span></h4>
                 <a th:href="@{'/mycredit/person/' + ${person.id} + '/bank/mono'}">Счета монобанк</a>
+                <a th:href="@{'/person/pdf/' + ${person.id}}">Скачать PDF</a>
             </div>
             <div class="media-right">
+                <span th:if="${!#strings.isEmpty(person.image)}">
                 <img th:src=${person.image} height="140" width="140">
+                </span>
+                <span th:unless="${!#strings.isEmpty(person.image)}">
+                   <img th:src="@{'/image/'+${person.id}}" height="140" width="140">
+                </span>
                 <a th:href="@{'/mycredit/person/' + ${person.id} + '/credit/add'}"><img th:src=@{/img/add_2.png}></a>
             </div>
         </div>

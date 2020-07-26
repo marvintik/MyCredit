@@ -21,6 +21,9 @@ public class Person {
     @Column(nullable = true)
     String image;
 
+    @Column(nullable = true)
+    byte[] imageFile;
+
     @Column
     String tokenMono;
 

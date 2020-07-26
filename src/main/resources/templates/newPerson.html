@@ -15,17 +15,19 @@
 <div th:replace="fragments/header :: header"/>
 <div class="container">
     <h1 th:inline="text">Добавьте нового человека:</h1>
-        <form th:action="@{'/'+${personAdd}+'/add'}" method="post" th:object="${person}">
-            <div class="form-group">
-                <label>Имя</label>
-                <input type="text" th:field="*{name}">
-            </div>
-            <div class="form-group">
-                <label>Картинка</label>
-                <input type="text" th:field="*{image}">
-            </div>
-            <input type="submit" value="Добавить человека">
-        </form>
+    <form th:action="@{'/'+${personAdd}+'/add'}" method="post" th:object="${person}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Имя</label>
+            <input type="text" th:field="*{name}">
+        </div>
+        <div class="form-group">
+            <label>Вставьте ссылку на картинку:</label>
+            <input type="text" th:field="*{image}">
+            <label>Или загрузите файл:</label>
+            <input type="file" class="custom-file-input" name="file" accept="image/*" >
+        </div>
+        <input type="submit" value="Добавить человека">
+    </form>
 </div>
 </body>
 </html>

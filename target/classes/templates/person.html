@@ -38,7 +38,8 @@
                 th:style="${rowStat.odd} ? 'color: gray' : 'color: blue;'">
                 <td th:text="${rowStat.count}"></td>
                 <td th:text="${person.name}"></td>
-                <td><a th:href="@{'/mycredit/person/' + ${person.id}}"><img th:src=${person.image} height=42, weight=42></a></td>
+                <td th:if="${!#strings.isEmpty(person.image)}"><a th:href="@{'/mycredit/person/' + ${person.id}}"><img th:src="${person.image}" height=42, weight=42></a></td>
+                <td th:unless="${!#strings.isEmpty(person.image)}"><a th:href="@{'/mycredit/person/' + ${person.id}}"><img th:src="@{'/image/'+${person.id}}" height=42, weight=42></a></td>
                 <td><a th:href="@{'/mycredit/person/' + ${person.id} +'/edit'}"><img th:src=@{/img/editPerson.png} height=42, weight=42></a></td>
                 <td><a th:href="@{'/mycredit/person/' + ${person.id} + '/delete'}"><img th:src=@{/img/delete.png} height=42, weight=42></a></td>
             </tr>
