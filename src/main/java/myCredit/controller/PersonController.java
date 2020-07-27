@@ -1,6 +1,5 @@
 package myCredit.controller;
 
-import com.itextpdf.text.Document;
 import lombok.SneakyThrows;
 import myCredit.domain.BankAccount;
 import myCredit.domain.Credit;
@@ -13,22 +12,21 @@ import myCredit.utils.PdfCreator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.persistence.EntityNotFoundException;
 import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
-import java.util.Comparator;
 import java.util.List;
+
+import static myCredit.utils.PrintCredit.printMonthPay;
+import static myCredit.utils.PrintCredit.printSum;
 
 @Controller
 @RequestMapping("")
@@ -58,10 +56,13 @@ public class PersonController {
         return "/newPerson";
     }
 
+    @SneakyThrows
     @PostMapping("/mycredit/person/add")
-    public String newPersonAdd(@ModelAttribute Person person, Model model) {
-        if (person.getImage() == "" || person.getImage() == null) {
+    public String newPersonAdd(@ModelAttribute Person person, Model model, @RequestParam("file") MultipartFile file) {
+        if (person.getImage() == "" || person.getImage() == null && file == null) {
             person.setImage("https://goo.su/16eh");
+        } else {
+            person.setImageFile(file.getBytes());
         }
         personService.createPerson(person);
         return "redirect:/mycredit/person/all";
@@ -74,9 +75,14 @@ public class PersonController {
         return "/editPerson";
     }
 
+    @SneakyThrows
     @PostMapping(value = "/mycredit/person/{id}/edit")
-    public String editPersonForm(@ModelAttribute Person person, @PathVariable Integer id, Model model) {
+    public String editPersonForm(@ModelAttribute Person person, @PathVariable Integer id, Model model, @RequestParam("file") MultipartFile file) {
         person.setId(id);
+        if (file != null) {
+            person.setImageFile(file.getBytes());
+            person.setImage("");
+        }
         personService.savePerson(person);
         return "redirect:/mycredit/person/all";
     }
@@ -118,19 +124,9 @@ public class PersonController {
     public String getPerson(@PathVariable Integer id, Model model) {
         Person person = personService.getPerson(id);
         List<Credit> credits = person.getCredits();
-        double sumCost = 0;
-        double sumMonthPay = 0;
-        for (Credit credit : credits) {
-            if (credit.getCost() != null) {
-                sumCost += credit.getCost();
-            }
-            if (credit.getMonthPay() != null) {
-                sumMonthPay += credit.getMonthPay();
-            }
-        }
         model.addAttribute("person", person);
-        model.addAttribute("sumCost", sumCost);
-        model.addAttribute("sumMonthPay", sumMonthPay);
+        model.addAttribute("sumCost", printSum(credits));
+        model.addAttribute("sumMonthPay", printMonthPay(credits));
         return "/personId";
     }
 
@@ -143,7 +139,6 @@ public class PersonController {
         String personAdd = "user/" + id + "/person";
         model.addAttribute("persons", persons);
         model.addAttribute("personAdd", personAdd);
-      //  model.addAttribute("image", image);
         return "person";
     }
 
@@ -162,8 +157,6 @@ public class PersonController {
         if (person.getImage() == "" || person.getImage() == null && file == null) {
             person.setImage("https://goo.su/16eh");
         } else {
-            file.getContentType();
-            file.getOriginalFilename();
             person.setImageFile(file.getBytes());
         }
         person.setUser(userService.getUser(id));
@@ -184,24 +177,19 @@ public class PersonController {
     @RequestMapping(value = "/person/pdf/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_PDF_VALUE)
     public ResponseEntity<InputStreamResource> getPdf(HttpServletResponse response, @PathVariable("id") int id) throws EntityNotFoundException, IOException {
         var person = personService.getPerson(id);
-      //  Document document = pdfCreator.createPdf(person);
 
-        ByteArrayInputStream bis = pdfCreator.createPdf(person);
+        ByteArrayInputStream bis = pdfCreator.createPersonPdf(person);
 
         HttpHeaders headers = new HttpHeaders();
-        String name = person.getName() +"_credits.pdf";
-        headers.add("Content-Disposition", "inline; " +name);
+        String name = person.getName() + "_credits.pdf";
+        headers.add("Content-Disposition", "inline; " + name);
 
         return ResponseEntity
                 .ok()
                 .headers(headers)
                 .contentType(MediaType.APPLICATION_PDF)
                 .body(new InputStreamResource(bis));
-//        HttpHeaders headers = new HttpHeaders();
-//        response.setContentType(MediaType.APPLICATION_PDF_VALUE);
-//        response.getOutputStream().write(person.getImageFile());
-//        response.setContentLength(person.getImageFile().length);
     }
 
 
-    }
+}

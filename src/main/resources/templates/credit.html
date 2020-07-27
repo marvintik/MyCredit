@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <title>MyCredit</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <div th:replace="fragments/header :: header-css"/>
 </head>
 
@@ -17,7 +13,7 @@
     <h1 th:inline="text">Кредиты: <span th:text="${bank}"></span></h1>
         <h3 th:inline="text"> Общая сумма:  <span th:text="${sumCost}"></span></h3>
         <h3 th:inline="text"> Сумма в месяц:  <span th:text="${sumMonthPay}"></span></h3>
-
+    <a th:unless="${id == 0}" th:href="@{'/user/'+${id}+'/credit/all/pdf/'}" sec:authorize="hasRole('ROLE_USER')">Скачать PDF</a>
     <input class="form-control"  id="myInput" type="text" placeholder="Search..">
         <div class="table-responsive">
         <table id="creditTable" class="table">

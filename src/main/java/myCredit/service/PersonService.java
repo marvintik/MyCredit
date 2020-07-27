@@ -1,6 +1,7 @@
 package myCredit.service;
 
 import myCredit.domain.Person;
+import myCredit.exceptions.EntityNotFoundException;
 import myCredit.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,8 +28,10 @@ public class PersonService {
         return personRepository.save(person);
     }
 
-    public void savePerson(Person person) {
-        personRepository.save(person);
+    public void savePerson(Person person) throws EntityNotFoundException {
+       if(personRepository.existsById(person.getId())){
+        personRepository.save(person);}
+       else  throw new EntityNotFoundException(Person.class, person.getId());
     }
 
     public List<Person> listAll() {

@@ -1,5 +1,6 @@
 package myCredit.controller;
 
+import lombok.SneakyThrows;
 import myCredit.domain.Credit;
 import myCredit.service.CreditService;
 import myCredit.service.PersonService;
@@ -42,6 +43,7 @@ public class CreditRestController {
         @DeleteMapping(value = "/credit/{id}/delete")
         public void deleteCredit(@PathVariable Integer id){ creditService.deleteCredit(id); }
 
+        @SneakyThrows
         @ResponseBody
         @PostMapping(value = "/credit/{id}/edit")
         public Credit editCredit(@RequestBody Credit credit, @PathVariable Integer id) {
@@ -96,6 +98,7 @@ public class CreditRestController {
             return creditService.listAllCredits();
         }
 
+        @SneakyThrows
         @PostMapping("/credits/save")
         public void saveCredit(@RequestBody Credit credit) {
             creditService.saveCredit(credit);

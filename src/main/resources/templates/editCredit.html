@@ -4,43 +4,41 @@
     <title>MyCredit</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <div th:replace="fragments/header :: header-css"/>
 </head>
 
 <body>
 <div th:replace="fragments/header :: header"/>
-<div class="container">
+<div class="container-fluid">
     <h1 th:inline="text">Изменить кредит:</h1>
         <form th:action="@{'/mycredit/person/' + ${person.id} + '/credit/' + ${credit.id} + '/edit'}" method="post" th:object="${credit}">
             <div class="form-group">
-                <label>Банк</label>
-                <input type="text" th:field="*{bank}" th:value="${credit.bank}">
+                <label for="bank">Банк</label>
+                <input id="bank" type="text" class="form-control"  th:field="*{bank}">
             </div>
             <div class="form-group">
-                <label>Название</label>
-                <input type="text" th:field="*{title}" th:value="${credit.title}">
+                <label for="name">Название</label>
+                <input id="name" class="form-control"  type="text" th:field="*{title}">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="DateStart">Дата начала</label>
+                    <input type="date" class="form-control" id="DateStart" th:field="*{{dateStart}}">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="DateEnd">Дата окончания</label>
+                    <input type="date" class="form-control" id="DateEnd" th:field="*{{dateEnd}}">
+                </div>
             </div>
             <div class="form-group">
-                <label>Дата начала</label>
-                <input type="date" th:field="*{{dateStart}}"  th:value="${credit.dateStart}">
+                <label for="summ">Сумма</label>
+                <input id="summ" class="form-control"  type="text" th:field="*{cost}">
             </div>
             <div class="form-group">
-                <label>Дата окончания</label>
-                <input type="date" th:field="*{{dateEnd}}"  th:value="${credit.dateEnd}">
+                <label for="monthPay">Ежемесячный платеж</label>
+                <input id="monthPay" class="form-control"  type="text" th:field="*{monthPay}">
             </div>
-            <div class="form-group">
-                <label>Сумма</label>
-                <input type="text" th:field="*{cost}"  th:value="${credit.cost}">
-            </div>
-            <div class="form-group">
-                <label>Ежемесячный платеж</label>
-                <input type="text" th:field="*{monthPay}"  th:value="${credit.monthPay}">
-            </div>
-            <input type="submit" value="Изменить кредит">
+            <input type="submit" class="btn btn-primary"  value="Изменить кредит">
         </form>
 </div>
 </body>

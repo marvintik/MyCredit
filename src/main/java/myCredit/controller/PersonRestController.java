@@ -2,6 +2,7 @@ package myCredit.controller;
 
 import myCredit.domain.Credit;
 import myCredit.domain.Person;
+import myCredit.exceptions.EntityNotFoundException;
 import myCredit.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,7 +38,7 @@ public class PersonRestController {
 
     @ResponseBody
     @PostMapping(value = "/person/{id}/edit")
-    public Person editPerson(@RequestBody Person person, @PathVariable Integer id){
+    public Person editPerson(@RequestBody Person person, @PathVariable Integer id) throws EntityNotFoundException {
         personService.savePerson(person);
         Person editPerson = personService.getPerson(id);
         return editPerson;
@@ -58,7 +59,7 @@ public class PersonRestController {
     }
 
     @PostMapping(value = "/persons/save")
-    public void savePerson(@RequestBody Person person) {
+    public void savePerson(@RequestBody Person person) throws EntityNotFoundException {
         personService.savePerson(person);
     }
 

@@ -7,16 +7,27 @@ import myCredit.domain.User;
 import myCredit.service.CreditService;
 import myCredit.service.PersonService;
 import myCredit.service.UserService;
+import myCredit.utils.PdfCreator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.persistence.EntityNotFoundException;
+import javax.servlet.http.HttpServletResponse;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+import static myCredit.utils.PrintCredit.*;
 
 @Controller
 @RequestMapping("")
@@ -29,6 +40,8 @@ public class CreditController {
     PersonService personService;
     @Autowired
     UserService userService;
+    @Autowired
+    PdfCreator pdfCreator;
 
     @RequestMapping(value ="/mycredit/credit/{id}", method = RequestMethod.GET)
     public Credit getCredit(@PathVariable Integer id) {
@@ -64,7 +77,7 @@ public class CreditController {
     }
 
     @PostMapping(value = "/mycredit/person/{id}/credit/{creditId}/edit")
-    public String editCreditByPersonForm(@ModelAttribute Credit credit, @PathVariable Integer id,  @PathVariable Integer creditId, Model model){
+    public String editCreditByPersonForm(@ModelAttribute Credit credit, @PathVariable Integer id,  @PathVariable Integer creditId, Model model) throws myCredit.exceptions.EntityNotFoundException {
         credit.setId(creditId);
         credit.setPerson(personService.getPerson(id));
         creditService.saveCredit(credit);
@@ -86,7 +99,7 @@ public class CreditController {
 
     @ResponseBody
     @PostMapping(value = "/mycredit/credit/{id}/edit")
-    public Credit editCredit(@RequestBody Credit credit, @PathVariable Integer id) {
+    public Credit editCredit(@RequestBody Credit credit, @PathVariable Integer id) throws myCredit.exceptions.EntityNotFoundException {
         creditService.saveCredit(credit);
         Integer i = credit.getId();
       Credit editCredit = creditService.getCredit(i);
@@ -95,15 +108,9 @@ public class CreditController {
     @GetMapping(value = "/mycredit/credit/search/bank/{bank}")
     public String searchCreditByBank(@PathVariable String bank, Model model){
         List<Credit> credits = creditService.listCreditBank(bank);
-        double sumCost = 0;
-        double sumMonthPay = 0;
-        for (Credit credit:credits) {
-            if (credit.getCost() != null) {sumCost += credit.getCost();}
-            if (credit.getMonthPay() != null) {sumMonthPay += credit.getMonthPay();}
-        }
         model.addAttribute("bank", bank);
-        model.addAttribute("sumCost", sumCost);
-        model.addAttribute("sumMonthPay", sumMonthPay);
+        model.addAttribute("sumCost", printSum(credits));
+        model.addAttribute("sumMonthPay", printMonthPay(credits));
         model.addAttribute("credits", credits);
         return "/credit";
     }
@@ -112,16 +119,10 @@ public class CreditController {
     @GetMapping(value = "/mycredit/credit/search/title/{title}")
     public String searchCreditByTitle(@PathVariable String title, Model model){
         List<Credit> credits =   creditService.listCreditTitle(title);
-        double sumCost = 0;
-        double sumMonthPay = 0;
-        for (Credit credit:credits) {
-            if (credit.getCost() != null) {sumCost += credit.getCost();}
-            if (credit.getMonthPay() != null) {sumMonthPay += credit.getMonthPay();}
-        }
         String bank = title;
         model.addAttribute("bank", bank);
-        model.addAttribute("sumCost", sumCost);
-        model.addAttribute("sumMonthPay", sumMonthPay);
+        model.addAttribute("sumCost", printSum(credits));
+        model.addAttribute("sumMonthPay", printMonthPay(credits));
         model.addAttribute("credits", credits);
         return "/credit";
     }
@@ -141,17 +142,12 @@ public class CreditController {
     @GetMapping(value="/mycredit/credit/all")
     public String home(Model model) {
         List<Credit> credits = creditService.listAll();
-        double sumCost = 0;
-        double sumMonthPay = 0;
-        for (Credit credit:credits) {
-            if (credit.getCost() != null) {sumCost += credit.getCost();}
-            if (credit.getMonthPay() != null) {sumMonthPay += credit.getMonthPay();}
-        }
         var bank = "Все банки";
         model.addAttribute("bank", bank);
-        model.addAttribute("sumCost", sumCost);
-        model.addAttribute("sumMonthPay", sumMonthPay);
+        model.addAttribute("sumCost", printSum(credits));
+        model.addAttribute("sumMonthPay", printMonthPay(credits));
         model.addAttribute("credits", credits);
+        model.addAttribute("id", 0);
         return "/credit";
     }
 
@@ -168,6 +164,7 @@ public class CreditController {
         return creditService.listAllCredits();
     }
 
+    @SneakyThrows
     @PostMapping("/mycredit/credits/save")
     public void saveCredit(@RequestBody Credit credit) {
         creditService.saveCredit(credit);
@@ -175,24 +172,31 @@ public class CreditController {
 
     @GetMapping(value="/user/{id}/credit/all")
     public String allCreditsByUser(Model model, @PathVariable Integer id) {
-       //List<Credit> credits = creditService.listAll();
         User user = userService.getUser(id);
-        List<Person> persons = user.getPersons();
-        List<Credit> credits = new ArrayList();
-        for(Person person:persons){
-            credits.addAll(person.getCredits());
-        }
-        double sumCost = 0;
-        double sumMonthPay = 0;
-        for (Credit credit:credits) {
-            if (credit.getCost() != null) {sumCost += credit.getCost();}
-            if (credit.getMonthPay() != null) {sumMonthPay += credit.getMonthPay();}
-        }
+        List<Credit> credits = printCredits(user);
         var bank = "Все банки";
         model.addAttribute("bank", bank);
-        model.addAttribute("sumCost", sumCost);
-        model.addAttribute("sumMonthPay", sumMonthPay);
+        model.addAttribute("sumCost", printSum(credits));
+        model.addAttribute("sumMonthPay", printMonthPay(credits));
         model.addAttribute("credits", credits);
+        model.addAttribute("id", user.getId());
         return "/credit";
+    }
+
+    @RequestMapping(value = "/user/{id}/credit/all/pdf/", method = RequestMethod.GET, produces = MediaType.APPLICATION_PDF_VALUE)
+    public ResponseEntity<InputStreamResource> getPdf(HttpServletResponse response, @PathVariable("id") int id) throws EntityNotFoundException, IOException {
+        var user = userService.getUser(id);
+
+        ByteArrayInputStream bis = pdfCreator.createUserPdf(user);
+
+        HttpHeaders headers = new HttpHeaders();
+        String name = user.getUsername() +"_credits.pdf";
+        headers.add("Content-Disposition", "inline; " +name);
+
+        return ResponseEntity
+                .ok()
+                .headers(headers)
+                .contentType(MediaType.APPLICATION_PDF)
+                .body(new InputStreamResource(bis));
     }
 }

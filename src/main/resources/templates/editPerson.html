@@ -4,10 +4,6 @@
     <title>Person</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <div th:replace="fragments/header :: header-css"/>
 </head>
 
@@ -17,14 +13,19 @@
     <h1 th:inline="text">Изменить человека:</h1>
         <form th:action="@{'/mycredit/person/' + ${person.id} + '/edit'}" method="post" th:object="${person}">
             <div class="form-group">
-                <label>Имя</label>
-                <input type="text" th:field="*{name}" th:value="${person.name}">
+                <label for="name">Имя</label>
+                <input type="text"  class="form-control" id="name"  th:field="*{name}">
             </div>
             <div class="form-group">
-                <label>Картинка</label>
-                <input type="text" th:field="*{image}" th:value="${person.image}">
+                <label for="image" >Вставьте ссылку на картинку:</label>
+                <input type="text" class="form-control" id="image" th:field="*{image}">
             </div>
-            <input type="submit" value="Изменить человека">
+            <div class="custom-file">
+                <label for="file" class="custom-file-label" >Или загрузите картинку:</label>
+                <input type="file" class="custom-file-input"  id="file" lang="ru" accept="image/*" name="file" >
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Изменить человека">
         </form>
 </div>
 </body>
