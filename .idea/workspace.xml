@@ -2,50 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aecc938a-8cda-4067-94c1-ca5986fc4eba" name="Default Changelist" comment="Update Application.properties">
-      <change afterPath="$PROJECT_DIR$/src/main/java/myCredit/exceptions/EntityAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myCredit/exceptions/EntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myCredit/utils/PrintCredit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/fox.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/config/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/CreditRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/controller/PersonRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/service/CreditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/service/CreditService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/service/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myCredit/utils/PdfCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myCredit/utils/PdfCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/credit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editCredit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editCredit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editPerson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newCredit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newCredit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newPerson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/newUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/newUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/person.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/personId.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/personId.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/personIdMono.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/personIdMono.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/config/SpringSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/config/SpringSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/controller/CreditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/controller/CreditController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/controller/PersonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/myCredit/utils/PdfCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myCredit/utils/PdfCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/credit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editCredit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editCredit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editPerson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/newCredit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/newCredit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/newPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/newPerson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/newUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/newUser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/person.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/person.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/personId.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/personId.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/personIdMono.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/personIdMono.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,11 +137,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update Application.properties" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1595721689297">
+    <state x="549" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1595961301458">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589843059583" />
-    <state x="549" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1595721689297" />
+    <state x="549" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1595961301458" />
     <state x="416" y="52" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1588948715921">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -204,26 +164,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588976604588" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1595883303447">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1595962068199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1286" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595883303447" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1595883303447">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595962068199" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1595962068199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1286" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595883303447" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1595883303446">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595962068199" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1595962068199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1286" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595883303446" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1595883303447">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595962068199" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1595962068199">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1286" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591384670853" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595883303447" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595962068199" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1595848625861">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -253,19 +213,20 @@
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588967433784" />
     <state x="142" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595018658237" />
-    <state x="439" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1595877410112">
+    <state x="439" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1595959485760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="390" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1594058408009" />
-    <state x="439" y="216" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1595877410112" />
+    <state x="439" y="216" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1595959485760" />
     <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1595018832183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1595018832183" />
-    <state x="413" y="119" key="extract.method.dialog" timestamp="1590243710394">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="464" y="135" key="extract.method.dialog" timestamp="1595960263956">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="413" y="119" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1590243710394" />
+    <state x="464" y="135" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1595960263956" />
     <state x="517" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1595879912306">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
