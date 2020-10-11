@@ -1,7 +1,5 @@
-D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\config\SpringFoxConfig.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\domain\Person.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\repository\RoleRepository.java
-D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\utils\PrintCredit.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\config\HttpServer.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\domain\Role.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\domain\User.java
@@ -15,10 +13,8 @@ D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\config\SpringSecurityConfig
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\controller\MainController.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\controller\PersonController.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\controller\CreditRestController.java
-D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\exceptions\EntityAlreadyExistException.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\service\CreditService.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\repository\CreditRepository.java
-D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\utils\ConvertUnicode.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\service\UserService.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\domain\BankAccount.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\service\BankService.java
@@ -27,7 +23,5 @@ D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\controller\UserController.j
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\repository\UserFacebookRepository.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\repository\UserRepository.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\Application.java
-D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\exceptions\EntityNotFoundException.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\service\OauthService.java
 D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\service\PersonService.java
-D:\Lena\IdeaProjects\MyCredit\src\main\java\myCredit\utils\PdfCreator.java

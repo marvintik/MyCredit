@@ -9,6 +9,6 @@
 
     <include file="db/changelog/init.xml"/>
     <include file="db/changelog/db.change-table.xml"/>
-    <include file="db/changelog/db.load-data.xml"/>
+    <include file="db/changelog/db.create-table.xml"/>
 
 </databaseChangeLog>
