@@ -12,6 +12,8 @@
         <h1>Главная страница</h1>
         <h2><a th:href="@{/admin}" sec:authorize="hasRole('ROLE_ADMIN')">страницу Admin</a></h2>
         <h2> <a th:href="@{/user}">Страница пользователя</a></h2>
+        <h1 th:inline="text">Это работает?  <span th:text="${isIt}"></span>!</h1>
+        <span th:text="${agree}"></span>
     </div>
 
 </div>

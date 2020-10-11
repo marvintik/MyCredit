@@ -28,12 +28,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/error", "/account/**", "/webjars/**").permitAll()
+                .antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/error", "/account/**", "/webjars/**", "/swagger-ui/**").permitAll()
                 .antMatchers("/admin/**", "/mycredit/**").hasAnyRole("ADMIN")
                 .antMatchers("/user/**", "/mycredit/**").hasAnyRole("USER")
                 .anyRequest().authenticated()
                 .and()
-                .requiresChannel().antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/error", "/account/**").requiresInsecure()
+                .requiresChannel().antMatchers("/", "/index", "/about", "/resources/**", "/api/**", "/css/**", "/js/**", "/img/**", "/error", "/account/**", "/swagger-ui/**").requiresInsecure()
                 .and()
                 .csrf().disable()
                 .requiresChannel()

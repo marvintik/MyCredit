@@ -3,6 +3,7 @@ package myCredit.controller;
 import myCredit.domain.User;
 import myCredit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ResolvableType;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -37,8 +38,13 @@ public class MainController  {
     @Autowired
     UserService userService;
 
+    @Value( "${first.message}" )
+    private String firstMess;
+
+
     @GetMapping(value = {"/", "/index"})
-    public String index() {
+    public String index(Model model) {
+        System.out.println(firstMess);
         return "/index";
     }
 

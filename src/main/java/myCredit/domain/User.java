@@ -36,7 +36,7 @@ public class User  implements UserDetails {
 
         @Enumerated(EnumType.STRING)
         @ManyToMany(fetch = FetchType.EAGER)
-         Set<Role> roles;
+        Set<Role> roles;
 
         @ToString.Exclude
         @JsonManagedReference

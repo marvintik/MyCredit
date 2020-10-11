@@ -159,7 +159,7 @@ public class  UserService implements UserDetailsService {
             else {
                 User userDet = new User();
                 userDet.setEmail(user.getAttribute("email"));
-                userDet.setPicture("https://graph.facebook.com/" + user.getName() + "/picture?type=normal");
+                userDet.setPicture(user.getAttribute("picture"));
                 userDet.setUsername(user.getAttribute("email"));
                 userDet.setPassword(user.getName());
                 saveUser(userDet);

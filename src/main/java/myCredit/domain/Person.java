@@ -35,6 +35,6 @@ public class Person {
     @ToString.Exclude
     @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "users_id")
     User user;
 }
